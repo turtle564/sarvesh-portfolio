@@ -18,6 +18,18 @@ export default function MusicPlayer() {
     audio.volume = volume;
     audio.muted = true;
     audio.play().then(() => setPlaying(true)).catch(() => {});
+
+    // Pause when user leaves, resume when they come back
+    const handleVisibility = () => {
+      if (document.hidden) {
+        audio.pause();
+        setPlaying(false);
+      } else {
+        audio.play().then(() => setPlaying(true)).catch(() => {});
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
