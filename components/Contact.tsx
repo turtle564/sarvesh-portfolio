@@ -144,7 +144,7 @@ export default function Contact() {
                 <ArrowUpRight size={20} className="shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
               </a>
               <a
-                href="https://www.linkedin.com/in/sarvesh-sajan-59b1b126b/"
+                href="https://www.linkedin.com/messaging/compose/?to=urn%3Ali%3Amember%3A1108279559"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-between gap-4 px-7 py-5 border border-accent text-accent hover:bg-accent hover:text-white active:scale-[0.98] transition-all duration-200 flex-1"
