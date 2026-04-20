@@ -11,7 +11,7 @@ const experience = [
     role: "Marketing & Operations Intern",
     org: "Emirates Motor Company",
     location: "Abu Dhabi, U.A.E.",
-    period: "July 2023",
+    period: "July 2023 – July 2023",
     points: [
       "Supported cross-departmental operations, gaining direct exposure to automotive retail processes, dealership workflows, and service operations.",
       "Conducted market research and analysis on automotive industry trends, evolving customer preferences, and competitive positioning, delivering actionable insights to senior team members.",
@@ -25,7 +25,7 @@ const education = [
     degree: "Bachelor of Business Administration",
     school: "Manipal Academy of Higher Education",
     location: "Dubai, U.A.E.",
-    period: "2025",
+    period: "Sep. 2022 – Sep. 2025",
     detail: "Specialisation in Marketing · Graduated with Distinction",
   },
 ];
