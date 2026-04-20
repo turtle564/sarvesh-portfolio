@@ -7,7 +7,7 @@ import { EnvelopeSimple, Phone, MapPin, LinkedinLogo, ArrowUpRight } from "@phos
 const D = "var(--font-barlow)";
 
 const contactItems = [
-  { icon: EnvelopeSimple, label: "Email", value: "sajansarvesh155@gmail.com", href: "mailto:sajansarvesh155@gmail.com" },
+  { icon: EnvelopeSimple, label: "Email", value: "sarveshsajan1@outlook.com", href: "mailto:sarveshsajan1@outlook.com" },
   { icon: Phone, label: "Phone", value: "+971 56 317 4914", href: "tel:+971563174914" },
   { icon: MapPin, label: "Location", value: "Abu Dhabi, U.A.E.", href: null },
 ];

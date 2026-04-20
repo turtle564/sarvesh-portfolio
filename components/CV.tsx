@@ -104,7 +104,7 @@ export default function CV() {
             <div className="h-0.5 w-20 bg-accent mt-6" />
           </div>
           <a
-            href="/cv.pdf"
+            href="/Sarvesh%20Sajan%20CV.pdf"
             download
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-white text-base font-semibold tracking-[0.15em] uppercase hover:bg-accent-hover active:scale-[0.98] transition-all duration-200 self-start"
           >

@@ -123,7 +123,7 @@ export default function Hero() {
               Gallery
             </a>
             <a
-              href="/cv.pdf"
+              href="/Sarvesh%20Sajan%20CV.pdf"
               download
               className="inline-flex items-center gap-3 px-8 py-4 border border-bg-border text-text-secondary text-base font-500 tracking-[0.15em] uppercase hover:border-text-muted hover:text-text-primary active:scale-[0.98] transition-all duration-200"
               style={{ fontFamily: "var(--font-barlow)", fontWeight: 500 }}

@@ -65,7 +65,7 @@ export default function Nav() {
               )
             ))}
             <a
-              href="/cv.pdf"
+              href="/Sarvesh%20Sajan%20CV.pdf"
               download
               className="text-sm font-medium tracking-widest uppercase px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-text-primary transition-all duration-200"
               style={{ fontFamily: "var(--font-barlow)", letterSpacing: "0.1em" }}
@@ -119,7 +119,7 @@ export default function Nav() {
               )
             ))}
             <a
-              href="/cv.pdf"
+              href="/Sarvesh%20Sajan%20CV.pdf"
               download
               onClick={() => setMenuOpen(false)}
               className="font-display text-xl font-600 tracking-widest uppercase px-8 py-3 border border-accent text-accent"

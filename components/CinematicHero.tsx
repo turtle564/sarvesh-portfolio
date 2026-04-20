@@ -135,7 +135,7 @@ export default function CinematicHero() {
               Gallery
             </Link>
             <a
-              href="/cv.pdf"
+              href="/Sarvesh%20Sajan%20CV.pdf"
               download
               className="inline-flex items-center px-8 py-4 border border-bg-border text-text-secondary text-sm tracking-[0.18em] uppercase hover:border-text-muted hover:text-text-primary active:scale-[0.98] transition-all duration-200"
               style={{ fontFamily: D, fontWeight: 500 }}
