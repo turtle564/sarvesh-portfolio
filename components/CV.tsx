@@ -8,13 +8,14 @@ const D = "var(--font-display)";
 
 const experience = [
   {
-    role: "Intern",
+    role: "Marketing & Operations Intern",
     org: "Emirates Motor Company",
     location: "Abu Dhabi, U.A.E.",
-    period: "07/2023",
+    period: "July 2023",
     points: [
-      "Assisted across departments, gaining direct exposure to automotive operations and processes.",
-      "Conducted research and analysis on automotive market trends and customer preferences.",
+      "Supported cross-departmental operations, gaining direct exposure to automotive retail processes, dealership workflows, and service operations.",
+      "Conducted market research and analysis on automotive industry trends, evolving customer preferences, and competitive positioning, delivering actionable insights to senior team members.",
+      "Collaborated with internal teams to document operational findings, strengthening written communication and professional reporting skills.",
     ],
   },
 ];
@@ -25,7 +26,7 @@ const education = [
     school: "Manipal Academy of Higher Education",
     location: "Dubai, U.A.E.",
     period: "2025",
-    detail: "Specialisation in Marketing · Passed with Distinction",
+    detail: "Specialisation in Marketing · Graduated with Distinction",
   },
 ];
 
@@ -38,9 +39,11 @@ const certs = [
 const skills = [
   "Strategic Planning",
   "Market Research",
-  "Data-Driven Analysis",
+  "Consumer Behaviour Analysis",
   "Team Collaboration",
-  "Microsoft Office",
+  "Microsoft Office Suite",
+  "Marketing Analytics",
+  "Professional Communication",
 ];
 
 const openTo = [
