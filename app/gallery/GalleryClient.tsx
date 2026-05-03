@@ -14,7 +14,7 @@ const photos = [
     title: "Golden Hour — CRG #426",
     event: "UAE RMC Championship",
     year: "2024–25",
-    description: "Pushing the CRG at golden hour on track in Abu Dhabi. The fastest kart category in the UAE series.",
+    description: "Pushing the CRG Go-Kart at the golden hour on track in Abu Dhabi. The fastest kart category in the UAE series.",
     featured: true,
   },
   {
