@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import MusicPlayer from "@/components/MusicPlayer";
 import ScrollToTop from "@/components/ScrollToTop";
+import BackgroundCanvas from "@/components/BackgroundCanvas";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
+        <BackgroundCanvas />
         <ScrollToTop />
         {children}
         <MusicPlayer />

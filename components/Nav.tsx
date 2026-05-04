@@ -30,7 +30,7 @@ export default function Nav() {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-bg/90 backdrop-blur-md border-b border-bg-border"
+            ? "bg-bg/95 backdrop-blur-md border-b border-bg-border"
             : "bg-transparent"
         }`}
       >
@@ -49,7 +49,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   className="text-sm font-medium tracking-widest uppercase text-text-secondary hover:text-text-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-barlow)", letterSpacing: "0.1em" }}
+                  style={{ fontFamily: "var(--font-display)", letterSpacing: "0.1em" }}
                 >
                   {link.label}
                 </Link>
@@ -58,7 +58,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   className="text-sm font-medium tracking-widest uppercase text-text-secondary hover:text-text-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-barlow)", letterSpacing: "0.1em" }}
+                  style={{ fontFamily: "var(--font-display)", letterSpacing: "0.1em" }}
                 >
                   {link.label}
                 </a>
@@ -67,8 +67,8 @@ export default function Nav() {
             <a
               href="/Sarvesh%20Sajan%20CV.pdf"
               download
-              className="text-sm font-medium tracking-widest uppercase px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-text-primary transition-all duration-200"
-              style={{ fontFamily: "var(--font-barlow)", letterSpacing: "0.1em" }}
+              className="text-sm font-medium tracking-widest uppercase px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition-all duration-200"
+              style={{ fontFamily: "var(--font-display)", letterSpacing: "0.1em" }}
             >
               Download CV
             </a>

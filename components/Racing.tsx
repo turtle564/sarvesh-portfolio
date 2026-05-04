@@ -48,26 +48,35 @@ export default function Racing() {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   return (
-    <section id="racing" className="py-28 md:py-36 bg-bg" ref={ref}>
+    <section id="racing" className="py-28 md:py-36 bg-bg overflow-hidden" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
-        <motion.div
-          initial={{ opacity: 0, y: 36, scale: 0.97 }}
-          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-20"
-        >
-          <p className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 font-medium">
+        <div className="mb-20 overflow-hidden">
+          <motion.p
+            className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 font-semibold"
+            style={{ fontFamily: D }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
             On Track
-          </p>
-          <h2
+          </motion.p>
+          <motion.h2
             className="font-display leading-none uppercase text-text-primary"
             style={{ fontFamily: D, fontWeight: 900, fontSize: "clamp(3.5rem,8vw,7rem)", lineHeight: 0.95 }}
+            initial={{ opacity: 0, x: -80 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.07 }}
           >
             Race Record
-          </h2>
-          <div className="h-0.5 w-20 bg-accent mt-6" />
-        </motion.div>
+          </motion.h2>
+          <motion.div
+            className="h-0.5 bg-accent mt-6"
+            initial={{ width: 0 }}
+            animate={inView ? { width: 80 } : {}}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+          />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20">
 
@@ -76,9 +85,9 @@ export default function Racing() {
             {achievements.map((a, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -24, scale: 0.98 }}
-                animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.12 + i * 0.12 }}
+                initial={{ opacity: 0, x: -70 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 + i * 0.13 }}
                 className="group grid grid-cols-[96px_1fr] gap-6 md:gap-10 py-10 border-t border-bg-border hover:border-accent/50 transition-colors duration-300"
               >
                 <p className="text-text-muted text-sm tracking-[0.1em] uppercase pt-1 font-medium">

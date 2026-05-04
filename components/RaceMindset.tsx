@@ -35,59 +35,78 @@ export default function RaceMindset() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 28, scale: 0.98 }}
-          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-20"
-        >
-          <p className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4"
-            style={{ fontFamily: "var(--font-barlow)" }}>
+        <div className="mb-20">
+          <motion.p
+            className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 font-semibold"
+            style={{ fontFamily: "var(--font-display)" }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
             Track Record. Board Room Ready.
-          </p>
-          <h2
-            className="font-display leading-none uppercase text-text-primary"
-            style={{ fontFamily: "var(--font-barlow)", fontWeight: 900, fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: 0.92 }}
+          </motion.p>
+          <div className="overflow-hidden">
+            <motion.h2
+              className="font-display leading-none uppercase text-text-primary"
+              style={{ fontFamily: "var(--font-display)", fontWeight: 900, fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: 0.95 }}
+              initial={{ opacity: 0, x: -80 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
+            >
+              Race Mind.
+            </motion.h2>
+          </div>
+          <div className="overflow-hidden">
+            <motion.h2
+              className="font-display leading-none uppercase"
+              style={{ fontFamily: "var(--font-display)", fontWeight: 900, fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: 0.95, color: "#8b2020" }}
+              initial={{ opacity: 0, x: -80 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
+            >
+              Real World.
+            </motion.h2>
+          </div>
+          <motion.div
+            className="h-0.5 bg-accent mt-6 mb-8"
+            initial={{ width: 0 }}
+            animate={inView ? { width: 80 } : {}}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+          />
+          <motion.p
+            className="text-text-secondary text-xl md:text-2xl leading-relaxed max-w-[54ch]"
+            style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
           >
-            Race Mind.
-          </h2>
-          <h2
-            className="font-display leading-none uppercase"
-            style={{ fontFamily: "var(--font-barlow)", fontWeight: 900, fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: 0.92, color: "#8b2020" }}
-          >
-            Real World.
-          </h2>
-          <div className="h-0.5 w-20 bg-accent mt-6 mb-8" />
-          <p className="text-text-secondary text-xl md:text-2xl font-300 leading-relaxed max-w-[54ch]"
-            style={{ fontFamily: "var(--font-barlow)", fontWeight: 300 }}>
             Competing at professional level in karting demands the same qualities that define high performers in business. The discipline, focus, and composure built on track translate directly into any professional environment.
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {pillars.map((p, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 32, scale: 0.97 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 + i * 0.1 }}
-              className="group p-8 md:p-10 border-t border-bg-border md:odd:border-r hover:bg-bg-surface transition-colors duration-400"
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.2 + i * 0.1 }}
+              className="group p-8 md:p-10 border-t border-bg-border md:odd:border-r hover:bg-bg-surface transition-colors duration-300"
             >
               <div className="flex items-start gap-5 mb-5">
-                <span className="text-accent font-display text-sm font-700 tracking-widest mt-1"
-                  style={{ fontFamily: "var(--font-barlow)", fontWeight: 700 }}>
+                <span className="text-accent text-sm font-bold tracking-widest mt-1"
+                  style={{ fontFamily: "var(--font-display)" }}>
                   {p.num}
                 </span>
                 <h3
-                  className="font-display text-3xl md:text-4xl font-900 uppercase text-text-primary group-hover:text-accent transition-colors duration-300 leading-none"
-                  style={{ fontFamily: "var(--font-barlow)", fontWeight: 900 }}
+                  className="font-display text-2xl md:text-3xl uppercase text-text-primary group-hover:text-accent transition-colors duration-300 leading-tight"
+                  style={{ fontFamily: "var(--font-display)", fontWeight: 800 }}
                 >
                   {p.title}
                 </h3>
               </div>
-              <p className="text-text-secondary text-lg md:text-xl font-300 leading-relaxed max-w-[50ch]"
-                style={{ fontFamily: "var(--font-barlow)", fontWeight: 300 }}>
+              <p className="text-text-secondary text-lg leading-relaxed max-w-[50ch]">
                 {p.desc}
               </p>
             </motion.div>

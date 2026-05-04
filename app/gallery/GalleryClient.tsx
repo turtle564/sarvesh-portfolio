@@ -113,12 +113,14 @@ export default function GalleryClient() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="mb-4"
         >
-          <DimReveal
-            src={photos[0].src}
-            alt={photos[0].title}
-            className="w-full aspect-[16/7]"
-            onClick={() => setLightbox(0)}
-          />
+          <div className="relative z-[20]">
+            <DimReveal
+              src={photos[0].src}
+              alt={photos[0].title}
+              className="w-full aspect-[16/7]"
+              onClick={() => setLightbox(0)}
+            />
+          </div>
           <div className="pt-4 pb-2 flex items-start justify-between gap-4">
             <div>
               <p className="text-accent text-sm tracking-[0.18em] uppercase font-medium mb-1">
@@ -144,12 +146,14 @@ export default function GalleryClient() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 + i * 0.1 }}
             >
-              <DimReveal
-                src={photo.src}
-                alt={photo.title}
-                className="w-full aspect-[4/3]"
-                onClick={() => setLightbox(i + 1)}
-              />
+              <div className="relative z-[20]">
+                <DimReveal
+                  src={photo.src}
+                  alt={photo.title}
+                  className="w-full aspect-[4/3]"
+                  onClick={() => setLightbox(i + 1)}
+                />
+              </div>
               <div className="pt-4 pb-2">
                 <p className="text-accent text-xs tracking-[0.18em] uppercase font-medium mb-1">
                   {photo.event}

@@ -32,7 +32,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="bg-bg-surface" ref={ref}>
+    <section id="contact" className="bg-bg-surface relative z-[20]" ref={ref}>
 
       {/* ── Image hero with ALL contact info overlaid ── */}
       <div className="relative w-full min-h-[70vh] flex items-center">

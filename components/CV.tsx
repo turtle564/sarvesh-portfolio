@@ -84,37 +84,51 @@ export default function CV() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="cv" className="py-28 md:py-36 bg-bg" ref={ref}>
+    <section id="cv" className="py-28 md:py-36 bg-bg overflow-hidden" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 36, scale: 0.97 }}
-          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20"
-        >
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20">
           <div>
-            <p className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 font-medium">
-              Curriculum Vitae
-            </p>
-            <h2
-              className="font-display leading-none uppercase text-text-primary"
-              style={{ fontFamily: D, fontWeight: 900, fontSize: "clamp(3.5rem,8vw,7rem)", lineHeight: 0.95 }}
+            <motion.p
+              className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 font-semibold"
+              style={{ fontFamily: D }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              CV
-            </h2>
-            <div className="h-0.5 w-20 bg-accent mt-6" />
+              Curriculum Vitae
+            </motion.p>
+            <div className="overflow-hidden">
+              <motion.h2
+                className="font-display leading-none uppercase text-text-primary"
+                style={{ fontFamily: D, fontWeight: 900, fontSize: "clamp(3.5rem,8vw,7rem)", lineHeight: 0.95 }}
+                initial={{ opacity: 0, x: -80 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.07 }}
+              >
+                CV
+              </motion.h2>
+            </div>
+            <motion.div
+              className="h-0.5 bg-accent mt-6"
+              initial={{ width: 0 }}
+              animate={inView ? { width: 80 } : {}}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+            />
           </div>
-          <a
+          <motion.a
             href="/Sarvesh%20Sajan%20CV.pdf"
             download
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-white text-base font-semibold tracking-[0.15em] uppercase hover:bg-accent-hover active:scale-[0.98] transition-all duration-200 self-start"
+            initial={{ opacity: 0, x: 60 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           >
             <ArrowDown size={18} weight="bold" />
             Download CV
-          </a>
-        </motion.div>
+          </motion.a>
+        </div>
 
         {/* CURRENTLY OPEN TO — BIG */}
         <Reveal delay={0.1}>

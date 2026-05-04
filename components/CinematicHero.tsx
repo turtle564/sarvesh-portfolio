@@ -34,7 +34,7 @@ export default function CinematicHero() {
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.04, 0.14], [0, 1, 0]);
 
   return (
-    <div ref={containerRef} style={{ height: "480vh" }} className="relative">
+    <div ref={containerRef} style={{ height: "480vh" }} className="relative z-[20]">
       <div className="sticky top-0 h-[100dvh] overflow-hidden bg-bg">
 
         {/* Video */}
