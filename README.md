@@ -15,6 +15,7 @@ Merge into `main`. The GitHub Actions workflow in `.github/workflows/deploy.yml`
 - `site/index.html`: the page
 - `site/css/site.css`: styles
 - `site/js/main.js`: scroll effects, menu, photo viewer, music, video sound
+- `site/vendor/`: GSAP with ScrollTrigger and ScrollToPlugin (animation), and Proton (the dust in the sunset). Stored in the repo so the page loads nothing from other sites. When you change a CSS or JS file, bump the `?v=` number on its link in `index.html` so browsers fetch the new copy.
 - `site/img`, `site/media`, `site/fonts`: photos, video and music, fonts
 - `site/cv/Sarvesh-Sajan-CV.pdf`: the CV the download button opens. Replace this file to update it. (`site/Sarvesh Sajan CV.pdf` keeps the old link working.)
 

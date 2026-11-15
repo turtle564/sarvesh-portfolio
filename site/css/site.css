@@ -43,8 +43,12 @@ nav.top .end{justify-self:end}
 .brand{text-align:center;text-decoration:none;line-height:1}
 .brand b{display:block;font:500 19px/1 var(--serif);font-variation-settings:"opsz" 11;letter-spacing:.01em}
 .brand small{display:block;font:600 7.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;margin-top:6px;padding-left:.32em}
-.menu{position:absolute;top:70px;left:clamp(20px,3.4vw,48px);background:var(--paper);padding:18px 22px;display:none;z-index:6;box-shadow:0 0 0 1px var(--hair)}
-.menu.open{display:grid;gap:12px}
+.menu{position:absolute;top:70px;left:clamp(20px,3.4vw,48px);background:var(--paper);color:var(--ink);padding:18px 22px;display:grid;gap:12px;z-index:6;box-shadow:0 0 0 1px var(--hair);
+  visibility:hidden;opacity:0;transform:translateY(-6px);transform-origin:top left;transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s}
+.menu.open{visibility:visible;opacity:1;transform:none;transition:opacity .28s cubic-bezier(.2,.7,.2,1),transform .28s cubic-bezier(.2,.7,.2,1),visibility 0s}
+.menu a{opacity:0;transform:translateY(4px);transition:opacity .15s ease,transform .15s ease}
+.menu.open a{opacity:1;transform:none;transition:opacity .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+.menu.open a:nth-child(2){transition-delay:.035s}.menu.open a:nth-child(3){transition-delay:.07s}.menu.open a:nth-child(4){transition-delay:.105s}.menu.open a:nth-child(5){transition-delay:.14s}.menu.open a:nth-child(6){transition-delay:.175s}
 .menu a{text-decoration:none}
 .menu a:hover{color:var(--rust)}
 .pill{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:4;white-space:nowrap;display:inline-flex;align-items:center;gap:12px;
@@ -173,8 +177,6 @@ td{text-align:right;color:var(--rust)}
 .lb-close{position:absolute;top:20px;right:26px}
 .lb-nav{width:48px;height:48px;display:grid;place-items:center;justify-self:center}
 .lb-nav:hover,.lb-close:hover{color:var(--rust)}
-@media (prefers-reduced-motion:no-preference){.lb.open figure{animation:lbIn .45s cubic-bezier(.2,.7,.2,1)}}
-@keyframes lbIn{from{opacity:0;transform:scale(.97)}}
 @media (max-width:760px){.lb{grid-template-columns:40px 1fr 40px;padding:56px 4px 24px}}
 /* music */
 .music{position:fixed;left:14px;bottom:14px;z-index:96;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:8px 12px 8px 10px}
@@ -260,3 +262,20 @@ td{text-align:right;color:var(--rust)}
   .facts h2{font-size:12vw}
   .frame{width:100%}
 }
+
+/* ───────── mockup 4 additions ───────── */
+/* reading progress: a hairline that fills as you go */
+.progress{position:fixed;inset:0 0 auto;height:2px;z-index:92;pointer-events:none}
+.progress i{display:block;height:100%;background:var(--rust);transform-origin:left;transform:scaleX(0)}
+/* press feedback on buttons */
+.sound,.badge,.lb-nav,.music,.navbtn,.lb-close{transition:transform .12s ease}
+.sound:active,.badge:active,.lb-nav:active,.music:active,.navbtn:active,.lb-close:active{transform:scale(.96)}
+/* gallery photos reveal with a wipe, like the portrait */
+@media (prefers-reduced-motion:no-preference){
+  .js .gallery .img:not(.shown){clip-path:inset(100% 0 0 0)}
+  .js .gallery .img:not(.shown) img{transform:scale(1.12)}
+}
+/* dust in the low sun */
+.dust{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.lb{opacity:0}
+.lb.open{opacity:1}
