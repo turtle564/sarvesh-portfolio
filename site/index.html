@@ -14,11 +14,16 @@
 <meta property="og:image" content="https://sarveshsajan.com/img/hero.jpg">
 <link rel="canonical" href="https://sarveshsajan.com/">
 <link rel="preload" href="fonts/bodoni.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<script src="js/main.js" defer></script>
+<link rel="stylesheet" href="css/site.css?v=4">
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/ScrollToPlugin.min.js" defer></script>
+<script src="vendor/proton.min.js" defer></script>
+<script src="js/main.js?v=4" defer></script>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
 <div id="page">
 
 <header class="intro" id="top">
@@ -163,6 +168,7 @@
     </div>
     <img class="cutout" id="cutout" src="img/cutout.webp" alt="" aria-hidden="true" loading="lazy">
   </div>
+  <canvas class="dust" id="dust" aria-hidden="true"></canvas>
   <div class="melt top" id="melt"></div>
   <div class="finale-card" id="finaleCard">
     <p class="label rust">Get in touch</p>
